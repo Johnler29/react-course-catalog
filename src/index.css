@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f6fa;
+  color: #202633;
+}
+
+.app {
+  width: min(900px, 90%);
+  margin: 60px auto;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #697386;
+  font-size: 14px;
+}
+
+.course-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.course-card {
+  background: #fff;
+  border: 1px solid #e3e5ed;
+  border-radius: 12px;
+  padding: 22px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.course-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.course-category {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e8efff;
+  color: #315db6;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.course-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #697386;
+  font-size: 13px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.badge-development {
+  background: #e8efff;
+  color: #315db6;
+}
+
+.badge-design {
+  background: #f9e7f1;
+  color: #a13279;
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  color: #252525;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: #315db6;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filters .filter-select {
+  margin-bottom: 0;
+}
+
+.course-count {
+  color: #697386;
+  font-size: 14px;
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+.empty-state {
+  padding: 40px 20px;
+  background: #fff;
+  border: 1px solid #e3e5ed;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: #697386;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    margin: 35px auto;
+  }
+
+  .course-catalog {
+    grid-template-columns: 1fr;
+  }
+}
